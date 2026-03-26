@@ -17,9 +17,13 @@ gpg --output doc_cifrado.txt --encrypt --recipient 59CBEBC4971494AD3CD503C6D83BB
 #Este comando me deja ver lo que hay en el documento cifrado
 cat doc_cifrado.txt
 #descargar el archivo cifrado de mi compañero y llevarlo al codespace y luego poner este comando para poder decifrar el documento de mi compañero Cayetano.
-gpg --decrypt doc_cifradoCaye.txt
+gpg --decrypt doc_cifradoCAYE.txt
 #comando para firmar un documento
 gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt
 # Se importó la llave de la clase(llave_privada_clase.asc)para solucionar el error de firma en los commits 
 # y porque el archivo de Cayetano se cifró con esa identidad; sin esa llave 
 # privada específica, el documento no abría en esta cuenta nueva.
+# Crea una firma digital en formato binario (.gpg)
+gpg --sign doc_no_cifrado.txt
+# Crea la firma en un archivo aparte (.sig) sin modificar el original
+gpg --detach-sign doc_no_cifrado.txt
