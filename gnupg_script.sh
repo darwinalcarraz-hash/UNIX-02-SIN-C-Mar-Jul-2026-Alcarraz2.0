@@ -20,3 +20,6 @@ cat doc_cifrado.txt
 gpg --decrypt doc_cifradoCaye.txt
 #comando para firmar un documento
 gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt
+# Se importó la llave de la clase(llave_privada_clase.asc)para solucionar el error de firma en los commits 
+# y porque el archivo de Cayetano se cifró con esa identidad; sin esa llave 
+# privada específica, el documento no abría en esta cuenta nueva.
