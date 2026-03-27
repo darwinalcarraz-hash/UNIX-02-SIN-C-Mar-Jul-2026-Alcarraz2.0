@@ -16,3 +16,13 @@ ls
 cd /bin
 #
 ls
+#
+cd/ workspaces/UNIX-02-SIN-C-Mar-Jul-2026
+#
+gcc saludo.c -o saludo_bin
+#
+sudo  mv saludo_bin /bin
+#
+ls
+#
+cat saludo_bin
