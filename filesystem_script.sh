@@ -8,9 +8,9 @@ cd /proc
 ls
 #shows cpu information 
 cat cpuinfo
-#
+#change to general directory
 cd /
-#
+#list 
 ls
 #
 cd /bin
@@ -26,3 +26,13 @@ sudo  mv saludo_bin /bin
 ls
 #
 cat saludo_bin
+# 
+saludo_bin
+#sirve para saber por donde me estoy moviendo
+pwd 
+#
+cd /
+#
+ls -F
+#
+ls -i
