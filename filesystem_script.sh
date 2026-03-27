@@ -8,3 +8,11 @@ cd /proc
 ls
 #shows cpu information 
 cat cpuinfo
+#
+cd /
+#
+ls
+#
+cd /bin
+#
+ls
