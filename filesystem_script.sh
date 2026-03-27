@@ -43,7 +43,7 @@ cat saludo_bin
 #execute the compiled program
 saludo_bin
 
-#sirve para saber por donde me estoy moviendo
+#It helps me know where I'm moving around.
 pwd
 
 #change back to the root directory
