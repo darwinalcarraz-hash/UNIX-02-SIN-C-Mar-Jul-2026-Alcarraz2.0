@@ -24,3 +24,15 @@ cd /home/codespace
 cd ~
 #cd to home directory using enviroment variable
 cd $HOME
+#Where am I?
+pwd
+#who am I?
+whoami
+#when each file was encoded
+ls -lt
+#ls command MANual
+man
+#It gives me the 20 files
+ls /dev | head -20
+#It's going to choose the last 5 for me
+ls /etc | tail -5
