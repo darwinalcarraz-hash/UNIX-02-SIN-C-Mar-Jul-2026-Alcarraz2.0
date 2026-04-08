@@ -16,3 +16,11 @@ stat .
 #Modify: 2026-04-08 21:08:26.810805986 +0000
 #Change: 2026-04-08 21:08:26.810805986 +0000
 #Birth: 2026-04-08 21:08:26.810805986 +0000
+#"cd" If I don't provide an argument, it will always take me to the home directory
+cd
+# cd to home directory using abosulte 
+cd /home/codespace
+# cd to home directory using ~ shorcut
+cd ~
+#cd to home directory using enviroment variable
+cd $HOME
