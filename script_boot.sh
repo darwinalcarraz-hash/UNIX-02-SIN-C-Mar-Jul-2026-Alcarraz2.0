@@ -36,3 +36,19 @@ man
 ls /dev | head -20
 #It's going to choose the last 5 for me
 ls /etc | tail -5
+#ls -al 
+total 120
+drwxr-x--- 1 codespace codespace 4096 Apr  8 21:58 .
+drwxr-xr-x 1 root      root      4096 Apr  8 20:55 ..
+-rw------- 1 codespace codespace  194 Apr  8 21:09 .bash_history
+-rw-r--r-- 1 codespace codespace  220 Mar 31  2024 .bash_logout
+-rw-r--r-- 1 codespace codespace 5885 Nov 27 10:33 .bashrc
+drwxrwxr-x 1 codespace codespace 4096 Apr  8 20:56 .cache
+#It means directory. Current directory.. parent directory
+d 
+#the permissions of the user who created the file
+rwx 
+#User groups have permissions that only allow them to read and execute.
+r-x 
+#These are the permissions that any other user who is not in the user group or a user has.
+---
