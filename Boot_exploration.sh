@@ -26,3 +26,11 @@ depth <depth>
 #"rw" has read and write permissions only
 #This string represents the file type and the access permissions for three different categories of users.
 -rw-rw-rw-  1 codespace root       1217 Apr 17 14:15 cifrado_firmado_final_CayeC.txt.gpg
+#Command to change permissions so that everyone can run it
+chmod +x script.sh 
+#command so that only the owner can execute it
+chmod u+x script.sh
+#This command is used to remove read access for others
+chmod o-r secreto.txt
+This command removes all permissions (owner reads/writes, no one else can do anything)
+chmod u+rw,go-rwx privado
