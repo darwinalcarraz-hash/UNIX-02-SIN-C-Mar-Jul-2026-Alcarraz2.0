@@ -12,3 +12,8 @@ ls -lah
 mkdir -- -rf
 #This removes the folder named "-rf" only if it is empty.
 rmdir -- -rf
+#This command displays a quick-reference manual for the "ls" command.
+ls --help
+#It gives us a complete manual 
+man ls
+#to navigate. I press the "/" key and type "all," and to move down I press the lowercase letter n, and to go up I press uppercase n, and to exit I press Q.
