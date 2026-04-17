@@ -8,3 +8,7 @@ ls -l -a -h
 ls -l -ah
 #Combined flags (The most common way to write it)    
 ls -lah  
+#This command tells the system that "-rf" is a name, not a set of options.
+mkdir -- -rf
+#This removes the folder named "-rf" only if it is empty.
+rmdir -- -rf
