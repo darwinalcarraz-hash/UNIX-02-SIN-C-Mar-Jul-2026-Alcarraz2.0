@@ -38,3 +38,7 @@ chmod u+rw,go-rwx privado
 sudo echo "hola" > /etc/archivo_protegido
 #Write "hello" to a protected file without displaying the result in the terminal and direct it to /dev/null 
 echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
+#Appends the word "chao" to the end of a protected file by running the entire redirection within a root shell.
+sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
+#To see what's inside that file, we use the cat
+cat /etc/archivo_protegido
