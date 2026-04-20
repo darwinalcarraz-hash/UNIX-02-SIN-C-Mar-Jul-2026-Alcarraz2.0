@@ -42,3 +42,5 @@ echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
 sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
 #To see what's inside that file, we use the cat
 cat /etc/archivo_protegido
+#We temporarily enter root and to exit we type exit
+sudo -i
