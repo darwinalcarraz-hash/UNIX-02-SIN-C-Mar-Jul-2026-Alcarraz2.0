@@ -3,7 +3,7 @@ ls -a
 #Show the files in the folder
 ls --all
 #Individual flags
-ls -l -a -h  
+ls -l -a -h  .
 #Mixed flags
 ls -l -ah
 #Combined flags (The most common way to write it)    
@@ -34,3 +34,7 @@ chmod u+x script.sh
 chmod o-r secreto.txt
 This command removes all permissions (owner reads/writes, no one else can do anything)
 chmod u+rw,go-rwx privado
+#Attempts to overwrite a protected file in /etc with the text "hola", but usually fails due to shell redirection limits.
+sudo echo "hola" > /etc/archivo_protegido
+#Write "hello" to a protected file without displaying the result in the terminal and direct it to /dev/null 
+echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
