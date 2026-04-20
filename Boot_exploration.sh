@@ -66,3 +66,11 @@ chmod +x hola.sh
 ./hola.sh
 #Shows the file details, allowing you to verify that it now has the execution permission (x).
 ls -l hola.sh
+#Read access for /etc is public.
+Is /etc
+#/etc belongs to root; normal users are not allowed to write there. (sudo)
+touch /etc/prueba.txt
+#~ is your home directory, where you have full control.
+mkdir ~/mi_carpeta
+#Installing packages modifies system directories like /usr/bin.(sudo)
+apt install cowsay
