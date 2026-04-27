@@ -89,4 +89,16 @@ ls -l prueba.txt
 #Changes the permissions to rwxr-xr-x: the owner has full control, and everyone else can only read and execute.
 sudo chmod 755 prueba.txt
 #Verifies the changes again to confirm that the file is now public for reading and execution.
-ls -l prueba.txt
+ls -l prueba.txt55
+#To solve the problems we have, we should not use AI, rather we use the Google search engine and search for the problem and thus we will find different pages where people have already solved it and give us the solution. If we use AI, it will confuse us and give us a lot of commands that we will get lost in how to solve such a problem.
+#Updates the list of available packages (doesn't install anything).
+#These are the commands I found on github solving this umasjk problem
+sudo apt-get update
+#Installs the latest versions of your current software.
+sudo apt-get upgrade
+#Installs the tool for advanced file permissions.
+sudo apt install acl
+#Makes you the owner of everything in the current folder.
+sudo chown -R $(whoami) .
+#Resets and clears all special/extra permissions from the files.
+sudo setfacl -bnR .
