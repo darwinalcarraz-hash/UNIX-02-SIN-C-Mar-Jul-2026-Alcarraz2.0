@@ -102,3 +102,7 @@ sudo apt install acl
 sudo chown -R $(whoami) .
 #Resets and clears all special/extra permissions from the files.
 sudo setfacl -bnR .
+#It is a folder where the owner has full access, the group can only read/enter, and it weighs 4096 bytes.
+drwxr-x--- 2 codespace codespace  4096 Apr 27 15:20 directorio2
+#It is a folder where the owner has full access, the group can only read/enter, and it weighs 4096 bytes.
+-rw-r----- 1 codespace codespace     0 Apr 27 15:20 archivo2
