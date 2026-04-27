@@ -110,3 +110,13 @@ drwxr-x--- 2 codespace codespace  4096 Apr 27 15:20 directorio2
 #umask 077 command output
 drwx------ 2 codespace codespace  4096 Apr 27 15:29 privado2
 -rw------- 1 codespace codespace     0 Apr 27 15:29 secreto2.txt
+#Creates a new user named "luna" with a home directory and sets ZSH as her default shell.
+sudo useradd -m -s /usr/bin/zsh luna
+#Lists the home directories to verify that luna's personal folder was successfully created.
+ls /home
+#Displays the current ownership and permission details of the file "mi_archivo".
+ls -l mi_archivo
+#Changes the owner of the file so that it now belongs to the user "luna".
+sudo chown luna mi_archivo
+#Re-checks the file details to confirm that the ownership has successfully switched to "luna".
+ls -l mi_archivo
