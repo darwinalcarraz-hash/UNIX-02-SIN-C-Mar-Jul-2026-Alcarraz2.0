@@ -84,3 +84,24 @@ cd Art
 #The tilde character (~) gives the current user's home directory.
 @darwinalcarraz-hash ➜ ~/nvm (62387b8) $ cd ~
 @darwinalcarraz-hash ➜ ~ $ 
+#The -t option will sort the files by their timestamp.
+@darwinalcarraz-hash ➜ /home $ ls -lt
+total 12
+drwxr-x--- 1 codespace codespace 4096 Apr 30 00:46 codespace
+drwxr-xr-x 3 root      root      4096 Apr 30 00:45 vscode
+#The -S (size) option will sort the files by file size:
+@darwinalcarraz-hash ➜ ~/java $ ls -l -S
+total 8
+drwxr-sr-x 9 codespace sdkman 4096 Apr  6 00:22 21.0.10-ms
+drwxr-sr-x 8 codespace sdkman 4096 Apr  6 00:22 25.0.2-ms
+lrwxrwxrwx 1 codespace sdkman   43 Mar 11 12:11 current -> /usr/local/sdkman/candidates/java/25.0.2-ms
+#The -r option will reverse the order of any sort order. Notice the difference when added to the previous example:
+@darwinalcarraz-hash ➜ ~/java $ ls -lSr
+total 8
+lrwxrwxrwx 1 codespace sdkman   43 Mar 11 12:11 current -> /usr/local/sdkman/candidates/java/25.0.2-ms
+drwxr-sr-x 8 codespace sdkman 4096 Apr  6 00:22 25.0.2-ms
+drwxr-sr-x 9 codespace sdkman 4096 Apr  6 00:22 21.0.10-ms
+#Using only the -r option with the list of files in reverse alphabetical order:
+@darwinalcarraz-hash ➜ / $ ls -r
+workspaces  var  tmp  srv                 sbin  root  opt  media  lib32              lib   go   dev   bin.usr-is-merged
+vscode      usr  sys  sbin.usr-is-merged  run   proc  mnt  lib64  lib.usr-is-merged  home  etc  boot  bin
