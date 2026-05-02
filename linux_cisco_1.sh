@@ -144,3 +144,18 @@ rw  #The permissions that the first group, which is the user that owns the file,
 rw  #The second set refers to the group that owns the file and has read and write permissions.
 #OTHERS
 rw  #The last group is for others; that is, if it is not the user who owns the file or a member of the group that owns the file, the third set of permissions will be applied, and the permissions they have are read and write.
+
+#chmod Command
+#para otorgar el permiso de ejecución al archivo hello.sh usamos el carácter "u" para representar el conjunto de permisos del usuario propietario, y agregando el carácter "+" para indicar que se agrega un permiso y el carácter "x para representar el permiso de ejecución
+sysadmin@localhost:~/Documents$ ls -l hello.sh                                  
+-rwxr--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh #The owner user now has permission to run:
+#Run the script with this command and now you will have execution permissions
+#The "./" is placed before the script name as this indicates that the “command” should be executed from the current directory.
+sysadmin@localhost:~/Documents$ ./hello.sh                                      
+ ______________                                                                 
+( Hello World! )                                                                
+ --------------                                                                 
+        \                                                                       
+         \                                                                      
+           <(^)                                                                 
+            ( ) 
