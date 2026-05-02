@@ -65,7 +65,22 @@ drwxrwxrwx+ 2 codespace root       4096 Apr 30 00:46 Calculadora
 pwd
 #To return to the user's home directory, we use this command:
 cd /home/sysadmin
-## The following command uses a relative path to access nvm/test from the current location, and pwd validates the resulting absolute path.
+# The following command uses a relative path to access nvm/test from the current location, and pwd validates the resulting absolute path.
+#A path can also be split into several `cd` commands. The following set of commands would achieve the same results:
+cd School
+cd Art
 @darwinalcarraz-hash ➜ ~ $ cd nvm/test
 @darwinalcarraz-hash ➜ ~/nvm/test (62387b8) $ pwd
 /home/codespace/nvm/test
+#Two points...
+#The character .. always represents a parent directory relative to the current directory; it is called the parent directory.
+@darwinalcarraz-hash ➜ ~/nvm/test (62387b8) $ cd ..
+@darwinalcarraz-hash ➜ ~/nvm (62387b8) $ 
+#One point.
+#The character (.) always represents your current directory.
+@darwinalcarraz-hash ➜ ~/nvm (62387b8) $ cd .
+@darwinalcarraz-hash ➜ ~/nvm (62387b8) $ 
+#The symbol ~
+#The tilde character (~) gives the current user's home directory.
+@darwinalcarraz-hash ➜ ~/nvm (62387b8) $ cd ~
+@darwinalcarraz-hash ➜ ~ $ 
