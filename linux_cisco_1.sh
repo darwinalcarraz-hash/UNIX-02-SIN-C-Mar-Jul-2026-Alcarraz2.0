@@ -63,3 +63,5 @@ total 116
 drwxrwxrwx+ 2 codespace root       4096 Apr 30 00:46 Calculadora
 #The pwd command prints the working directory, its current location within the file system:
 pwd
+#To return to the user's home directory, we use this command:
+cd /home/sysadmin
