@@ -61,3 +61,5 @@ total 116
 -rw-rw-rw-  1 codespace root      34523 Apr 30 00:46 LICENSE
 -rw-rw-rw-  1 codespace root       3194 Apr 30 00:46 Cayetano_llave_publica.asc
 drwxrwxrwx+ 2 codespace root       4096 Apr 30 00:46 Calculadora
+#The pwd command prints the working directory, its current location within the file system:
+pwd
