@@ -146,7 +146,7 @@ rw  #The second set refers to the group that owns the file and has read and writ
 rw  #The last group is for others; that is, if it is not the user who owns the file or a member of the group that owns the file, the third set of permissions will be applied, and the permissions they have are read and write.
 
 #chmod Command
-#para otorgar el permiso de ejecución al archivo hello.sh usamos el carácter "u" para representar el conjunto de permisos del usuario propietario, y agregando el carácter "+" para indicar que se agrega un permiso y el carácter "x para representar el permiso de ejecución
+#To grant the execute permission to the hello.sh file we use the character "u" to represent the permission set of the user owner, and adding the character "+" to indicate that a permission is added and the character "x to represent the execute permission
 @darwinalcarraz-hash ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 (linux_cisco_1) ls -l hello.sh                                  
 -rwxr--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh #The owner user now has permission to run:
 #Run the script with this command and now you will have execution permissions
@@ -178,3 +178,53 @@ bash: ./hello.sh: Permission denied
           \         
              <(^ )  
               ( ) 
+
+#Viewing files
+@darwinalcarraz-hash ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 (linux_cisco_1) $ cat doc_no_cifrado.txt
+Hola123
+# 'cat animals.txt' is used to quickly display the entire contents of the file in the terminal.
+@darwinalcarraz-hash ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 (linux_cisco_1) $ cat animals.txt
+1 retriever                                                             
+2 badger                                                                
+3 bat                                                                  
+4 wolf                                                                  
+5 eagle
+# The 'head' command is used to display, by default, the first 10 lines of the alpha.txt file.
+@darwinalcarraz-hash ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 (linux_cisco_1) $ head alpha.txt
+A is for Apple                    
+B is for Bear           
+C is for Cat                      
+D is for Dog                               
+E is for Elephant                                      
+F is for Flower       
+G is for Grapes                     
+H is for Happy                                     
+I is for Ink                                                         
+J is for Juice    
+# The 'tail' command is used to display the last 10 lines of the file, useful for reviewing recent entries.
+@darwinalcarraz-hash ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 (linux_cisco_1) $ tail alpha.txt
+Q is for Quark                         
+R is for Rat                          
+S is for Sloth                       
+T is for Turnip                        
+U is for Up                                     
+V is for Velvet                       
+W is for Walrus                    
+X is for Xenon                        
+Y is for Yellow         
+Z is for Zebra
+# 'head -n 5' is applied to limit the output strictly to the first 5 lines of the document.
+@darwinalcarraz-hash ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 (linux_cisco_1) $ head -n 5 alpha.txt
+A is for Apple                    
+B is for Bear           
+C is for Cat                      
+D is for Dog                               
+E is for Elephant
+# 'tail -n 5' is applied to extract only the last 5 lines of the alpha.txt file.
+@darwinalcarraz-hash ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 (linux_cisco_1) $ tail -n 5 alpha.txt
+V is for Velvet                       
+W is for Walrus                    
+X is for Xenon                        
+Y is for Yellow         
+Z is for Zebra 
+#File viewing is optimized using segmentation commands: while cat is ideal for small files, head and tail allow you to inspect specific metadata or records. Using the -n parameter demonstrates fine control over the output data stream
