@@ -147,11 +147,13 @@ rw  #The last group is for others; that is, if it is not the user who owns the f
 
 #chmod Command
 #para otorgar el permiso de ejecución al archivo hello.sh usamos el carácter "u" para representar el conjunto de permisos del usuario propietario, y agregando el carácter "+" para indicar que se agrega un permiso y el carácter "x para representar el permiso de ejecución
-sysadmin@localhost:~/Documents$ ls -l hello.sh                                  
+@darwinalcarraz-hash ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 (linux_cisco_1) ls -l hello.sh                                  
 -rwxr--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh #The owner user now has permission to run:
 #Run the script with this command and now you will have execution permissions
+@darwinalcarraz-hash ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 (linux_cisco_1) ls -l hello.sh                                  
+-rwxr--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh                        
 #The "./" is placed before the script name as this indicates that the “command” should be executed from the current directory.
-sysadmin@localhost:~/Documents$ ./hello.sh                                      
+@darwinalcarraz-hash ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 (linux_cisco_1) ./hello.sh                                      
  ______________                                                                 
 ( Hello World! )                                                                
  --------------                                                                 
@@ -159,3 +161,20 @@ sysadmin@localhost:~/Documents$ ./hello.sh
          \                                                                      
            <(^)                                                                 
             ( ) 
+# 'sudo chown root hello.sh' is used to change the file owner to the root user, requiring administrative privileges.
+@darwinalcarraz-hash ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 (linux_cisco_1) $ sudo chown root hello.sh
+# Run 'ls -l hello.sh' to verify in the third column that the new owner is indeed root.
+@darwinalcarraz-hash ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 (linux_cisco_1) $ ls -l hello.sh
+-rwxrw-rw- 1 root codespace 502 May  2 20:36 hello.sh
+## An attempt is made to run './hello.sh' as ​​an ordinary user, resulting in 'Permission denied' because the owner is now root.
+@darwinalcarraz-hash ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 (linux_cisco_1) $ ./hello.sh
+bash: ./hello.sh: Permission denied
+## 'sudo' is prefixed to execute the script with the identity of the owner (root), thus allowing us to visualize what is inside the script
+@darwinalcarraz-hash ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 (linux_cisco_1) $ sudo ./hello.sh
+  _________________ 
+( Hello World!     )
+  ----------------- 
+         \          
+          \         
+             <(^ )  
+              ( ) 
