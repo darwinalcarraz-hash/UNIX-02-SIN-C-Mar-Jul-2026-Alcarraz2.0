@@ -84,6 +84,7 @@ cd Art
 #The tilde character (~) gives the current user's home directory.
 @darwinalcarraz-hash ➜ ~/nvm (62387b8) $ cd ~
 @darwinalcarraz-hash ➜ ~ $ 
+#Ordenar archivos
 #The -t option will sort the files by their timestamp.
 @darwinalcarraz-hash ➜ /home $ ls -lt
 total 12
@@ -105,3 +106,22 @@ drwxr-sr-x 9 codespace sdkman 4096 Apr  6 00:22 21.0.10-ms
 @darwinalcarraz-hash ➜ / $ ls -r
 workspaces  var  tmp  srv                 sbin  root  opt  media  lib32              lib   go   dev   bin.usr-is-merged
 vscode      usr  sys  sbin.usr-is-merged  run   proc  mnt  lib64  lib.usr-is-merged  home  etc  boot  bin
+#The "su" command allows you to temporarily act as a different user.
+#When logging in using the shell option, you can specify it in three ways:
+#After running the "su" command, a password is required; the password for the root and sysadmin accounts is netlab123.
+#To log out and return to the sysadmin account, use the exit command
+#"sudo su" is used to escalate privileges to the superuser (root) level, taking advantage of the permissions of the current user in the Codespaces environment.
+su -
+su -l
+su --login
+#Using the "su" command to switch to the root account and run the sl command with administrative access:
+#To avoid executing sensitive or privileged commands, the steam locomotive command, sl
+
+#"sudo" command:
+#As with the su command, the sudo command assumes by default that the root user account should be used to execute commands.
+#The sl command as root user by putting sudo in front of it:
+sysadmin@localhost:~$  sudo sl
+[sudo] password for sysadmin:
+#The command completed, but the command prompt hasn't changed; we're still logged in as the sysadmin account.
+#The `sudo` command only provides administrative access for executing the specified command.
+#The command is executed as root if prefixed with the "sudo" command. Otherwise, the command is executed as a regular user.
