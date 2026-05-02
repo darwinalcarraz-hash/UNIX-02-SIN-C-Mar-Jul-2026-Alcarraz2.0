@@ -125,3 +125,22 @@ sysadmin@localhost:~$  sudo sl
 #The command completed, but the command prompt hasn't changed; we're still logged in as the sysadmin account.
 #The `sudo` command only provides administrative access for executing the specified command.
 #The command is executed as root if prefixed with the "sudo" command. Otherwise, the command is executed as a regular user.
+
+#Permits
+#We changed directories
+cd Calculadora
+#Now we use "ls -l" to see the permissions of the files inside this directory
+@darwinalcarraz-hash ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0/Calculadora (linux_cisco_1) $ ls -l app.py
+-rw-rw-rw- 1 codespace root 34 Apr 30 00:46 app.py
+#FILE TYPE:
+- #The first character is a -, this is an ordinary file; if it were a d it would be a directory
+#PERMITS
+rw-rw-rw- #These would be the permissions after the file type character.
+#These permissions are divided into three groups of three characters:
+
+#OWNER
+rw  #The permissions that the first group, which is the user that owns the file, has are read and write.
+#GROUP
+rw  #The second set refers to the group that owns the file and has read and write permissions.
+#OTHERS
+rw  #The last group is for others; that is, if it is not the user who owns the file or a member of the group that owns the file, the third set of permissions will be applied, and the permissions they have are read and write.
