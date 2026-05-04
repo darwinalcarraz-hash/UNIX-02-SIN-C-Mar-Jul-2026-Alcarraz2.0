@@ -226,7 +226,7 @@ RUN chsh -s /usr/bin/zsh root
 RUN cat >> /root/.zshrc <<'EOF'
 
 #==== vValida si un comando fue ejecutado correctamente ====
-PROMPT='%F{cyan}[Analista-🐧Darwin-Alcarraz69🐧]%f %F{yellow}%1~%f %(?.%F{green}✔️.%F{red}✘ %?)%f %# '
+PROMPT='%F{cyan}[Analista-🐧Darwin-Alcarraz69🐧]%f %F{yellow}%1~%f %(?.%F{green}✓.%F{red}✘ %?)%f %# '
 EOF
 
 CMD ["/usr/bin/zsh"]
