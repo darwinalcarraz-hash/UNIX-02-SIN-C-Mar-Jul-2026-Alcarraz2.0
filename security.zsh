@@ -6,3 +6,8 @@ groups
 cat /etc/passwd
 #Reads the user account file and pipes the output to show only the first 10 lines.
 cat /etc/passwd | head -10
+#My files and directories inherit the gid and uid
+touch test.txt
+ls -la
+#View all system groups
+cat /etc/group | head -10
