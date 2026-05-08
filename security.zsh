@@ -11,3 +11,10 @@ touch test.txt
 ls -la
 #View all system groups
 cat /etc/group | head -10
+#User ID
+id -u
+#Group ID principal
+21  id -g
+#All groups ID
+22  id -G
+              
