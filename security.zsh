@@ -35,8 +35,3 @@ GID_MAX                 60000
 #SYS_GID_MAX              999
 SUB_GID_MIN                100000
 SUB_GID_MAX             600100000
-#create groups with addgroup 
-addgroup diseno
-addgroup --gid 2100 marketing
-addgroup --system cache_web
-grep -E "diseno|marketing|cache_web" /etc/group
