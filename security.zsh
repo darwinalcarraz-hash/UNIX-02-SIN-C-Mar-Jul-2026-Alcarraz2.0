@@ -46,3 +46,11 @@ addgroup -gid 2100 marketing
 addgroup --system cache_web
 # Search for and display the created groups in the /etc/group file
 grep -E "diseno|marketing|cache_web" /etc/group
+diseno:x:1001:
+marketing:x:2100:
+cache_web:x:102:
+
+# Add user "root" to the "desarroolladores" group without removing existing groups
+usermod -aG desarroolladores root 
+# Add user "root" to the "diseno" group as a secondary group
+usermod -aG diseno root
