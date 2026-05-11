@@ -54,3 +54,6 @@ cache_web:x:102:
 usermod -aG desarroolladores root 
 # Add user "root" to the "diseno" group as a secondary group
 usermod -aG diseno root
+
+#Search for and display the created groups in the /etc/group file
+grep -E "desarrolladores|diseno" /etc/group
