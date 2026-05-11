@@ -64,3 +64,6 @@ adduser root marketing
 #Search for and display the created groups in the /etc/group file
 [Analista-🐧Darwin-Alcarraz69🐧] UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 ✓ # grep "marketing" /etc/group
 marketing:x:2100:root
+
+#this command removes all secondary groups except developers
+usermod -G desarrolladores root
