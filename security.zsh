@@ -99,3 +99,21 @@ drwxr-xr-x 2 root root            4096 may 11 14:58 .
 drwxr-xr-x 5 root root            4096 may 11 14:57 ..
 -rw-r--r-- 1 root desarrolladores    0 may 11 14:58 app.py
 -rw-r--r-- 1 root root               0 may 11 14:58 config.json
+
+# Change the group ownership of multiple files (config.json and informe.txt) to the 'diseno' group simultaneously.
+[Analista-🐧Darwin-Alcarraz69🐧] UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 ✘ 1 # chgrp diseno ~/lab_chgrp/proyectos/config.json ~/lab_chgrp/reportes/informe.txt
+
+# Verify the changes in the projects directory; 'config.json' should now belong to the 'diseno' group.                                                                                                                                 
+[Analista-🐧Darwin-Alcarraz69🐧] UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 ✓ # ls -la ~/lab_chgrp/proyectos/
+total 8
+drwxr-xr-x 2 root root            4096 may 11 14:58 .
+drwxr-xr-x 5 root root            4096 may 11 14:57 ..
+-rw-r--r-- 1 root desarrolladores    0 may 11 14:58 app.py
+-rw-r--r-- 1 root diseno             0 may 11 14:58 config.json
+
+# Verify the changes in the reportes directory; 'informe.txt' should now belong to the 'diseno' group.                                                                                                                                           
+[Analista-🐧Darwin-Alcarraz69🐧] UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 ✓ # ls -la ~/lab_chgrp/reportes/ 
+total 8
+drwxr-xr-x 2 root root   4096 may 11 14:58 .
+drwxr-xr-x 5 root root   4096 may 11 14:57 ..
+-rw-r--r-- 1 root diseno    0 may 11 14:58 informe.txt
