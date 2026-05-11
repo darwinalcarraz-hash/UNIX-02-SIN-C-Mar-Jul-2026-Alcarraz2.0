@@ -117,3 +117,20 @@ total 8
 drwxr-xr-x 2 root root   4096 may 11 14:58 .
 drwxr-xr-x 5 root root   4096 may 11 14:57 ..
 -rw-r--r-- 1 root diseno    0 may 11 14:58 informe.txt
+
+#Recursively change the group ownership of the 'scripts' directory and all its contents to 'desarrolladores'.
+[Analista-🐧Darwin-Alcarraz69🐧] UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 ✓ # chgrp -R desarrolladores ~/lab_chgrp/scripts/
+
+#List the contents of the 'scripts' directory recursively to verify that the directory and its files now belong to 'desarrolladores'.                                                                                                                                       
+[Analista-🐧Darwin-Alcarraz69🐧] UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 ✓ # ls -laR ~/lab_chgrp/scripts/
+/root/lab_chgrp/scripts/:
+total 8
+drwxr-xr-x 2 root desarrolladores 4096 may 11 14:59 .
+drwxr-xr-x 5 root root            4096 may 11 14:57 ..
+-rw-r--r-- 1 root desarrolladores    0 may 11 14:59 deploy.sh
+
+#Recursively and verbosely change the group of the 'reportes' directory to 'diseno', showing a confirmation message for each action.                                                                                                                                   
+[Analista-🐧Darwin-Alcarraz69🐧] UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 ✓ # chgrp -Rv diseno ~/lab_chgrp/reportes/
+el grupo de '/root/lab_chgrp/reportes/informe.txt' permanece como diseno
+cambiado el grupo de '/root/lab_chgrp/reportes/' de root a diseno
+                                                                     
