@@ -67,3 +67,9 @@ marketing:x:2100:root
 
 #this command removes all secondary groups except developers
 usermod -G desarrolladores root
+
+#add grupo_temporal
+groupadd grupo_temporal
+
+#restore
+usermod -aG diseno,marketing,grupo_temporal root
