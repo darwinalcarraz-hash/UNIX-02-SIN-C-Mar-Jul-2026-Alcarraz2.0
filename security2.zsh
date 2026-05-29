@@ -66,3 +66,19 @@ mkdir -p ~/proyecto_dev/src
 # Lists all files and directories in the user's home directory with detailed attributes
 # (permissions, owner, group, size, and last modified date)
 ls -la ~/
+
+# newgrp creates a subshell — this is demonstrable
+# The PID changes because a new child process is spawned
+
+# Prints the PID of the current shell before switching groups
+echo "PID del shell actual: $$"
+
+# Switches the active group to 'desarrolladores'
+# This spawns a new subshell (child process) with the new effective GID
+newgrp desarrolladores
+
+# Prints the PID inside the new subshell created by newgrp
+# The PID will be different from the one above — proof that a child process was created
+echo "PID dentro de newgrp: $$"
+
+# The PID is different — it is a child process
