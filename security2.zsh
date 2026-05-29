@@ -50,3 +50,19 @@ touch ~/after_newgrp.txt
 ls -la ~/after_newgrp.txt
 # Output: -rw-r--r-- 1 root desarrolladores 0 may 29 15:28 /root/after_newgrp.txt
 #         └─ confirms that the owning group is 'desarrolladores', not 'root'
+
+# Creates an empty file inside the active 'desarrolladores' group session
+# Used to verify that files created within the newgrp session inherit the correct group
+touch ~/dentro_de_newgrp.txt
+
+# Lists the detailed attributes of the file to confirm
+# that the owning group is 'desarrolladores' and not 'root'
+ls -la ~/dentro_de_newgrp.txt
+
+# Creates the directory structure 'proyecto_dev/src' inside the user's home directory
+# The -p flag creates all intermediate directories if they don't exist
+mkdir -p ~/proyecto_dev/src
+
+# Lists all files and directories in the user's home directory with detailed attributes
+# (permissions, owner, group, size, and last modified date)
+ls -la ~/
