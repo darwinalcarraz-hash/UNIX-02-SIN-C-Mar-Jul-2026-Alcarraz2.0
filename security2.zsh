@@ -82,3 +82,56 @@ newgrp desarrolladores
 echo "PID dentro de newgrp: $$"
 
 # The PID is different — it is a child process
+
+#---------------------------
+# Create a restricted group
+groupadd grupo_restringido
+
+# Verify the group was created successfully
+grep grupo_restringido /etc/group
+#[Analista-🐧Darwin-Alcarraz69🐧] UNIX-02-SIN-C-Mar-Jul-2026-Alcarraz2.0 ✓ # grep grupo_restringido /etc/group
+#grupo_restringido:x:1001:
+
+# Assign a password to the group
+# The system will prompt: New Password / Re-enter new password
+gpasswd grupo_restringido
+
+# Create a test user to demonstrate restricted access
+useradd -m usuario_prueba
+
+# Set a password for the test user
+passwd usuario_prueba
+
+# Verify that usuario_prueba does NOT belong to grupo_restringido
+# Output: grupo_restringido:x:1001:   ← no users listed at the end
+grep grupo_restringido /etc/group
+
+# Switch to the test user
+su - usuario_prueba
+
+# Confirm the user only belongs to their own group (grupo_restringido is absent)
+# Output: uid=1000(usuario_prueba) gid=1002(usuario_prueba) grupos=1002(usuario_prueba)
+id
+
+# Attempt to join the restricted group — system will ask for the group password
+newgrp grupo_restringido
+
+# Verify the group switch was successful
+id
+#$ id
+#uid=1000(usuario_prueba) gid=1001(grupo_restringido) grupos=1001(grupo_restringido),1002(usuario_prueba)
+id -gn
+#$ id -gn
+#grupo_restringido
+
+# Exit the newgrp subshell — temporary membership is lost
+exit
+
+# Confirm grupo_restringido is gone from the active groups
+#$ id
+#uid=1000(usuario_prueba) gid=1002(usuario_prueba) grupos=1002(usuario_prueba)
+#$ id -gn
+#usuario_prueba
+
+# Exit su — return to root
+exit
