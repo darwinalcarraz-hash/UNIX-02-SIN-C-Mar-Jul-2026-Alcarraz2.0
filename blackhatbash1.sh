@@ -11,6 +11,12 @@ ps -ef
 df --human-readable
 
 # Debugs with extra chatter (verbose mode: prints every single step and variable value).
-bash -x blackhatbash1.sh
+#bash -x blackhatbash1.sh
 # Runs in quiet lock-down (silent sandbox: restricts commands without telling you much).
-bash -r blackhatbash1.sh
+#bash -r blackhatbash1.sh
+
+# Tries to run the script (will fail with "Permission denied" if it's not executable yet).
+#./blackhatbash1.sh
+
+# Grants execution permission specifically to the owner (user) of the file.
+#chmod u+x blackhatbash1.sh
