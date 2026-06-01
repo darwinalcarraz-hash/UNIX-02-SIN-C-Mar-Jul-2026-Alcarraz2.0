@@ -1,5 +1,6 @@
 #!/bin/bash
 #!/usr/bin/env bash
+set-x
 bash --version
 env
 echo ${SHELL}
@@ -20,3 +21,6 @@ df --human-readable
 
 # Grants execution permission specifically to the owner (user) of the file.
 #chmod u+x blackhatbash1.sh
+
+#bash -n blackhatbash1.sh
+set +x
