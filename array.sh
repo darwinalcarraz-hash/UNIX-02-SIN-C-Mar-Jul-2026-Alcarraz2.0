@@ -1,6 +1,7 @@
 #!/bin/bash
 # Sets an array
 IP_ADDRESSES=(192.168.1.1 192.168.1.2 192.168.1.3)
+unset IP_ADDRESSES[1]
 # Prints all elements in the array
 set +x
 echo "${IP_ADDRESSES[*]}"
