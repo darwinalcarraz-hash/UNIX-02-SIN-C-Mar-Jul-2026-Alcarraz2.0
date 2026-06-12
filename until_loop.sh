@@ -1,6 +1,6 @@
 #!/bin/bash
 # Defines the name of the file we want to monitor.
-FILE="output.txt"
+FILE="output1.txt"
 
 # Creates an empty file (or updates its timestamp if it already exists).
 touch "${FILE}"
